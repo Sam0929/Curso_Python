@@ -8,6 +8,7 @@ text = 'Python'
 new_text = ''
 
 for char in text:
+    
     new_text += f'*{char}'
 
 new_text += '*'

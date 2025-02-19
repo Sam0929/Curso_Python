@@ -15,6 +15,8 @@ Faça a contagem de tentativas do seu
 usuário.
 """
 
+import os
+
 secret_word = 'secret'
 count = 0
 correct_chars = ''
@@ -40,6 +42,7 @@ while True:
     for char in secret_word:
 
         if char in correct_chars:
+
             writed_word += char
             
         else:
@@ -49,8 +52,9 @@ while True:
     print(writed_word)
 
     if (writed_word == secret_word):
-
+        os.system('cls')
         print('Parabéns, você acertou a palavra!!!')
+        print(f'A palavra era {writed_word}, você acertou em {count} tentativas')
 
         break
            
