@@ -29,3 +29,4 @@ print(lista_corrigida)
 
 frases_unidas = ' '.join(['abc', 'ab'])  # posso fazer um join com tudo que é iterável, listas, tuplas, etc
 print(frases_unidas) #join coloca a string que chamou o método entre cada elemento 
+

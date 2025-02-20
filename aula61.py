@@ -1,47 +1,42 @@
-"""
-Calculo do primeiro dígito do CPF
-CPF: 746.824.890-70
-Colete a soma dos 9 primeiros dígitos do CPF
-multiplicando cada um dos valores por uma
-contagem regressiva começando de 10
-
-Ex.:  746.824.890-70 (746824890)
-   10  9  8  7  6  5  4  3  2
-*  7   4  6  8  2  4  8  9  0
-   70  36 48 56 12 20 32 27 0
-
-Somar todos os resultados: 
-70+36+48+56+12+20+32+27+0 = 301
-Multiplicar o resultado anterior por 10
-301 * 10 = 3010
-Obter o resto da divisão da conta anterior por 11
-3010 % 11 = 7
-Se o resultado anterior for maior que 9:
-    resultado é 0
-contrário disso:
-    resultado é o valor da conta
-
-O primeiro dígito do CPF é 7
-"""
 import re
-cpf = '746.824.890'
+import random
 
-cpf = cpf.split('.')
 
-print(cpf)
-i = 10
-valor = 0
-for lista in cpf:
-    for num in lista:
-        valor += ((int(num) * i))
-        i -= 1
+# cpf = '746.824.890-70'
 
-print(valor)
+# cpf = re.sub(r'[^0-9]', '','746.824.890-70' )
 
-valor = (valor * 10) % 11
+cpf = ''
 
-if valor > 9:
+for i in range (9):
+
+    cpf += str(random.randint(0,9))
+
+
+def algoritmo_cpf(digito, cpf):
+
+    i = digito
+
     valor = 0
+    contador = 0
 
-print(valor)
+    while contador < (digito - 1):  # Garante que o loop rode exatamente (digito - 1) vezes
+        valor += (int(cpf[digito - i]) * i)  # Ajuste no índice do CPF
+        i -= 1
+        contador += 1  
+  
+    valor = (valor * 10) % 11
+    
+    if valor > 9:
+        valor = 0
+  
+    return (cpf + (str(valor)))
+
+ 
+    
+cpf = algoritmo_cpf(10, cpf)
+
+         
+cpf = algoritmo_cpf(11, cpf)
+print(cpf)
          
