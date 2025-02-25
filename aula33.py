@@ -6,4 +6,4 @@ string = '1000'
 # outra_variavel = f'{string[:3]}ABC{string[4:]}'
 # print(string)
 # print(outra_variavel)
-print(string.join(3*['wj']))
+print(string.join(2*['wj']))

@@ -12,8 +12,8 @@ salas = [
     ['Luiz', 'João', 'Eduarda', ],  # 2
 ]
 
-# p, b, *_, ap, u = lista
-# print(p, u, ap)
+p, b, *_, ap, u = lista
+print(p, b, ap, u)
 
 # print('Maria', 'Helena', 1, 2, 3, 'Eduarda')
 # print(*lista)

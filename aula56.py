@@ -6,11 +6,12 @@ join - une uma string
 
 """
 
-frase = "Olha só que legal, coisa interessante"
-
-lista_palavras = frase.split()
+frase = "Olha só que legal, coisa interessante!"
+lista_palavras0 = frase.split()
+lista_palavras1 = ' '.join(map(str, frase.split()))
 print(frase)
-print (lista_palavras)
+print (lista_palavras0)
+print(lista_palavras1)
 
 lista_por_virgula = frase.split(',')
 

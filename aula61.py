@@ -27,8 +27,7 @@ def algoritmo_cpf(digito, cpf):
   
     valor = (valor * 10) % 11
     
-    if valor > 9:
-        valor = 0
+    valor = 0 if valor > 9 else valor
   
     return (cpf + (str(valor)))
 
