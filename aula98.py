@@ -20,3 +20,5 @@ print(*sys.path, sep='\n')
 
 
 #para ter um codigo limpo, uma boa pratica e ter todos os modulos juntos com o main, no mesmo diretorio, pode ser em outras pasta, mas para dentro, nunca para fora
+
+

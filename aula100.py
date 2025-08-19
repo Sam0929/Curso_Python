@@ -11,7 +11,7 @@ from aula100_package import modulo
 
 #ma pratica, mas somente para exemplificar o dunder all
 from aula100_package.modulo import *
-print(variavel)
+print(x)
 
 print(a.soma(2,4))
 
@@ -23,6 +23,6 @@ print(soma(2,4))
 # print(__name__)
 
 
-from aula100_package.modulo2 import fala
+from aula100_package.modulo2 import qualquer_coisa
 
-fala()
+qualquer_coisa()
