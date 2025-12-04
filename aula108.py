@@ -1,19 +1,15 @@
+from itertools import zip_longest
+
+
 Cidades = ['Salvador', 'Ubatuba', 'Belo Horizonte']
 Estados = ['BA', 'SP', 'MG', 'RJ']
 
-print(len(Cidades))
-print(len(Estados))
+def zipper(l1, l2):
+    intervalo = min (len(Cidades), len(Estados))
+    return [(Cidades[i], Estados[i]) for i in range(intervalo)]
 
 
-def decorator(func):
-    def inner(*args):
-        if (len(args[0]) > len(args[1])):
-            res = func(*args)
-        return res
-    return inner
+print(zipper(Cidades, Estados))
 
-@decorator
-def unir_d0(data0, data1):
-    return
-
-
+print(list(zip(Cidades, Estados)))
+print(list(zip_longest(Cidades, Estados, fillvalue= 'Sem cidade')))
